@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TodoForm from './Components/TodoForm';
 import TodoList from './Components/TodoList';
+import './App.css'
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -34,7 +35,7 @@ const App = () => {
   return (
     <div>
       <h1>To-Do List</h1>
-      <TodoForm onAddTodo={addTodo} />
+      <TodoForm onAddTodo={addTodo}  />
       <TodoList todos={todos} onUpdateTodo={updateTodo} onDeleteTodo={deleteTodo} />
     </div>
   );
