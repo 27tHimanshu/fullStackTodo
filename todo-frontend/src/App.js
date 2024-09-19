@@ -33,11 +33,14 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>To-Do List</h1>
-      <TodoForm onAddTodo={addTodo}  />
-      <TodoList todos={todos} onUpdateTodo={updateTodo} onDeleteTodo={deleteTodo} />
+    <div className="outer">
+      <div className="todobox">
+        <h1>To-Do List</h1>
+        <TodoForm onAddTodo={addTodo} />
+        <TodoList todos={todos} onUpdateTodo={updateTodo} onDeleteTodo={deleteTodo} />
+      </div>
     </div>
+
   );
 };
 
